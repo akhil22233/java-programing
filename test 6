@@ -1,0 +1,66 @@
+1)class Base {
+    public void area(int a, int b) {
+        System.out.println("Area of Square: " + (a * a));
+    }
+}
+
+class Derived extends Base {
+    @Override
+    public void area(int a, int b) {
+        System.out.println("Area of Rectangle: " + (a * b));
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Base base = new Base();
+        base.area(5, 5); 
+
+        Derived derived = new Derived();
+        derived.area(4, 6); 
+    }
+}
+
+output:Area of Square: 25
+Area of Rectangle: 24
+
+2)public class Main {
+
+    
+    public static int sum(int a, int b) {
+        return a + b;
+    }
+
+
+    public static int sum(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    
+    public static int sum(int a) {
+        return a;
+    }
+
+   
+    public static double sum(double a, double b) {
+        return a + b;
+    }
+
+   
+    public static int sum(String a, int b) {
+        return Integer.parseInt(a) + b;
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Sum of 2 integers: " + sum(1, 2));
+        System.out.println("Sum of 3 integers: " + sum(1, 2, 3));
+        System.out.println("Sum of 1 integer: " + sum(1));
+        System.out.println("Sum of 2 doubles: " + sum(1.5, 2.5));
+        System.out.println("Sum of string and integer: " + sum("1", 2));
+    }
+}
+output:Sum of 2 integers: 3
+Sum of 3 integers: 6
+Sum of 1 integer: 1
+Sum of 2 doubles: 4.0
+Sum of string and integer: 3
